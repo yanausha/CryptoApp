@@ -46,6 +46,5 @@ class CoinRepositoryImpl(application: Application) : CoinRepository {
             }
             delay(10000)
         }
-
     }
 }
