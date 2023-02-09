@@ -17,6 +17,7 @@ interface DataModule {
 
     companion object {
 
+        @ApplicationScope
         @Provides
         fun provideCoinInfoDao(application: Application): CoinInfoDao {
             return AppDatabase.getInstance(application).coinPriceInfoDao()
