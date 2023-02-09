@@ -1,6 +1,6 @@
 package com.example.cryptoapp.di
 
-import android.content.Context
+import android.app.Application
 import com.example.cryptoapp.data.database.AppDatabase
 import com.example.cryptoapp.data.database.CoinInfoDao
 import com.example.cryptoapp.data.repository.CoinRepositoryImpl
@@ -18,8 +18,8 @@ interface DataModule {
     companion object {
 
         @Provides
-        fun provideCoinInfoDao(context: Context): CoinInfoDao {
-            return AppDatabase.getInstance(context).coinPriceInfoDao()
+        fun provideCoinInfoDao(application: Application): CoinInfoDao {
+            return AppDatabase.getInstance(application).coinPriceInfoDao()
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.cryptoapp.presentation
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.example.cryptoapp.domain.GetCoinInfoListUseCase
 import com.example.cryptoapp.domain.GetCoinInfoUseCase
@@ -17,6 +18,7 @@ class CoinViewModel @Inject constructor(
     fun getDetailInfo(fSym: String) = getCoinInfoUseCase(fSym)
 
     init {
+        Log.d("TEST_TAG", this.toString())
         loadDataUseCase()
     }
 }
